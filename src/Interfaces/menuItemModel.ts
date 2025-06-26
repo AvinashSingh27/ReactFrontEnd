@@ -5,5 +5,5 @@ export default interface menuItemModel {
     specialTag: string;
     category: string;
     price: number;
-    image: string;
+    imagePath: string;
   }

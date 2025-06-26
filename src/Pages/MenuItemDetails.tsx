@@ -147,7 +147,7 @@ function MenuItemDetails() {
           </div>
           <div className="col-5">
             <img
-              src={data.result.image}
+              src={data.result.imagePath}
               width="100%"
               style={{ borderRadius: "50%" }}
               alt="No content"

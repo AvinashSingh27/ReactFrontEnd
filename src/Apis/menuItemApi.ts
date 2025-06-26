@@ -3,7 +3,8 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 const menuItemApi = createApi({
   reducerPath: "menuItemApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://redmangoapi.azurewebsites.net/api/",
+    //baseUrl: "https://redmangoapi.azurewebsites.net/api/",
+    baseUrl: "https://localhost:7221/api/",
     prepareHeaders: (headers: Headers, api) => {
       const token = localStorage.getItem("token");
       token && headers.append("Authorization", "Bearer " + token);
@@ -12,7 +13,7 @@ const menuItemApi = createApi({
   tagTypes: ["MenuItems"],
   endpoints: (builder) => ({
     getMenuItems: builder.query({
-      query: () => ({
+      query: () => ({ 
         url: "menuitem",
       }),
       providesTags: ["MenuItems"],
@@ -33,7 +34,7 @@ const menuItemApi = createApi({
     }),
     updateMenuItem: builder.mutation({
       query: ({ data, id }) => ({
-        url: "menuitem/" + id,
+        url: "menuitem/" + id, 
         method: "PUT",
         body: data,
       }),

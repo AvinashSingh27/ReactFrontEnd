@@ -4,7 +4,7 @@ import { OrderDetails } from "../Pages";
 const orderApi = createApi({
   reducerPath: "orderApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://redmangoapi.azurewebsites.net/api/",
+    baseUrl: "https://localhost:7221/api/",
     prepareHeaders: (headers: Headers, api) => {
       const token = localStorage.getItem("token");
       token && headers.append("Authorization", "Bearer " + token);

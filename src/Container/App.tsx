@@ -64,10 +64,10 @@ function App() {
         <Route path="order/orderconfirmed/:id" element={<OrderConfirmed></OrderConfirmed>}></Route>
         <Route path="/order/myorders" element={<MyOrders></MyOrders>}></Route>
         <Route path="/order/orderDetails/:id" element={<OrderDetails></OrderDetails>}></Route>
-        <Route path="order/allOrders" element={<AllOrders></AllOrders>}></Route>
-        <Route path="menuItem/menuitemlist" element={<MenuItemList></MenuItemList>}></Route>
-        <Route path="menuItem/menuitemupsert/:id" element={<MenuItemUpsert></MenuItemUpsert>}></Route>
-        <Route path="menuItem/menuitemupsert/" element={<MenuItemUpsert></MenuItemUpsert>}></Route>
+        <Route path="/order/allOrders" element={<AllOrders></AllOrders>}></Route>
+        <Route path="/menuItem/menuitemlist" element={<MenuItemList></MenuItemList>}></Route>
+        <Route path="/menuItem/menuitemupsert/:id" element={<MenuItemUpsert></MenuItemUpsert>}></Route>
+        <Route path="/menuItem/menuitemupsert/" element={<MenuItemUpsert></MenuItemUpsert>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

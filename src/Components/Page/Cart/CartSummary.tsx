@@ -22,7 +22,6 @@ function CartSummary() {
   if (shoppingCartFromStore.length == 0) {
     return (
       <div className="p-5">
-        There are no items in your cart. Please add items to continue.
       </div>
     );
   }
@@ -72,7 +71,7 @@ function CartSummary() {
         >
           <div className="p-3">
             <img
-              src={cartItem.menuItem?.image}
+              src={cartItem.menuItem?.imagePath}
               alt=""
               width={"120px"}
               className="rounded-circle"
@@ -83,7 +82,7 @@ function CartSummary() {
             <div className="d-flex justify-content-between align-items-center">
               <h4 style={{ fontWeight: 300 }}>{cartItem.menuItem?.name}</h4>
               <h4>
-                ${(cartItem.quantity! * cartItem.menuItem!.price).toFixed(2)}
+                Rs {(cartItem.quantity! * cartItem.menuItem!.price).toFixed(2)}
               </h4>
             </div>
             <div className="flex-fill">

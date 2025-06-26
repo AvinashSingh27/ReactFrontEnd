@@ -24,7 +24,7 @@ function MenuItemList(){
         SD_SortTypes.PRICE_LOW_HIGH,
         SD_SortTypes.PRICE_HIGH_LOW,
         SD_SortTypes.NAME_A_Z,
-        SD_SortTypes.NAME_A_Z,
+        SD_SortTypes.NAME_Z_A,
     ];
 
 

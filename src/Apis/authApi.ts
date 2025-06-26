@@ -3,11 +3,11 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 const authApi = createApi({
   reducerPath: "authApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://redmangoapi.azurewebsites.net/api/",
-    // prepareHeaders: (headers: Headers, api) => {
-    //   const token = localStorage.getItem("token");
-    //   token && headers.append("Authorization", "Bearer " + token);
-    // },
+    baseUrl: "https://localhost:7221/api/",
+    prepareHeaders: (headers: Headers, api) => {
+      const token = localStorage.getItem("token");
+      token && headers.append("Authorization", "Bearer " + token);
+    },
   }),
   
   endpoints: (builder) => ({

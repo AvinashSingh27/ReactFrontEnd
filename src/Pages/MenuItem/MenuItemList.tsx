@@ -24,7 +24,7 @@ function MenuItemList(){
     );
   };
     return(
-      <>
+      <> 
       {isLoading && <MainLoader></MainLoader>}
       {!isLoading && (
       <div className="table p-5">
@@ -51,7 +51,7 @@ function MenuItemList(){
             <div className="row border" key={menuItem.id}>
           <div className="col-1">
             <img
-              src={menuItem.image}
+              src={menuItem.imagePath}
               alt="no content"
               style={{ width: "100%", maxWidth: "120px" }}
             />

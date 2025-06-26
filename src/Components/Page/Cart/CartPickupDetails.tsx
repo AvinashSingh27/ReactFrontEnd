@@ -14,6 +14,7 @@ function CartPickupDetails(){
         (state: RootState) => state.shoppingCartStore.cartItems ?? []
       );
 
+  
     let grandTotal = 0;
     let totalItems = 0;
     const initialUserData = {
@@ -44,6 +45,15 @@ function CartPickupDetails(){
     });
   },[userData])
 
+  // ✅ Only check cart length **after all hooks**
+  if (shoppingCartFromStore.length === 0) {
+    return (
+      <div className="p-5 text-center text-muted">
+        There are no items in your cart. Please add items to continue.
+      </div>
+    );
+  }
+
   const handleSubmit= async (e:React.FormEvent<HTMLFormElement>)=> {
     e.preventDefault();
     setLoading(true);
@@ -57,6 +67,7 @@ function CartPickupDetails(){
   };
 
     return(
+
         <div className="border pb-5 pt-3">
         <h1 style={{ fontWeight: "300" }} className="text-center text-success">
           Pickup Details
@@ -102,7 +113,7 @@ function CartPickupDetails(){
           </div>
           <div className="form-group mt-3">
             <div className="card p-3" style={{ background: "ghostwhite" }}>
-              <h5>Grand Total : ${grandTotal.toFixed(2)}</h5>
+              <h5>Grand Total : Rs {grandTotal.toFixed(2)}</h5>
               <h5>No of items : {totalItems}</h5>
             </div>
           </div>

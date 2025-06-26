@@ -7,7 +7,7 @@ import { OrderSummary } from "../Components/Page/Order";
 
 function Payment() {
   const {
-    state: { apiResult, userInput },
+    state: { apiResult, userInput }, 
   } = useLocation();
 
   //console.log(apiResult);
@@ -15,7 +15,7 @@ function Payment() {
   // const { apiResult, userInput } = location.state || {};
 
   const stripePromise = loadStripe(
-    "pk_test_51MG6xmDU3OjDrP4GJV8avgtFNNGxikOffHWtYgncDFkahat38KLX3foPPgFbk0JHNG2FmYhIpSNl2lqbnR3uEfRM00Bv0LptTW"
+    "pk_test_51RdE7rDEiHNJGFNIgiKCnaqPL3boRJZvkkHY9pvoQ7MmjU4Ih5cvHhehgOh3F0iF6W9hRf2C7pdawXAv8NqR31R900N2iqMh6P"
   );
   const options = {
     // passing the client secret obtained from the server

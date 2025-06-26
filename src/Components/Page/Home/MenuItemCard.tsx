@@ -15,6 +15,9 @@ interface Props{
 }
 
 function MenuItemCard(props: Props){
+
+  //console.log("Image path:", props.menuItem.imagePath);
+
   const navigate = useNavigate();
   const [isAddingToCart, setIsAddingToCart] = useState<boolean>(false);
   const [updateShoppingCart] = useUpdateShoppingCartMutation();
@@ -52,9 +55,9 @@ function MenuItemCard(props: Props){
             <Link to={`/menuItemDetails/${props.menuItem.id}`}>
             {/* ABOVE ONE */}
             <img
-              src={props.menuItem.image}
+              src={props.menuItem.imagePath}
               style={{ borderRadius: "50%" }}
-              alt=""
+              alt="Hi"
               className="w-100 mt-5 image-box"
             />
             </Link>   
