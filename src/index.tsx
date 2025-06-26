@@ -11,16 +11,15 @@ import { store } from './Storage';
 import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
-import { HashRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
 <Provider store={store}>
- <HashRouter>
+ <BrowserRouter>
  <ToastContainer></ToastContainer>
  <App></App>
- </HashRouter>
+ </BrowserRouter>
  </Provider>
 );
 
