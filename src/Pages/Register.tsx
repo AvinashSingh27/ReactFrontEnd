@@ -14,7 +14,8 @@ function Register(){
   const [userInput, setUserInput]=useState({
     userName:"",
     password:"",
-    role:"",
+    // role:"",
+    role: SD_Roles.CUSTOMER, // default role
     name:"",
   });
 
@@ -85,16 +86,7 @@ function Register(){
                 onChange={handleUserInput}
               />
             </div>
-            <div className="col-sm-6 offset-sm-3 col-xs-12 mt-4">
-              <select className="form-control form-select" required 
-                value={userInput.role}
-                name="role"
-                onChange={handleUserInput}>
-                <option value="">--Select Role--</option>
-                <option value={`${SD_Roles.CUSTOMER}`}>Customer</option>
-                <option value={`${SD_Roles.ADMIN}`}>Admin</option>
-              </select>
-            </div>
+            {/* Drop down code */}
           </div>
           <div className="mt-5">
             <button type="submit" className="btn btn-success" disabled={loading}>
